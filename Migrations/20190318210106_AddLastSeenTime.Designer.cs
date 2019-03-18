@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SafariAdventure;
@@ -9,9 +10,10 @@ using SafariAdventure;
 namespace SafariAdventure.Migrations
 {
     [DbContext(typeof(safariormsContext))]
-    partial class safariormsContextModelSnapshot : ModelSnapshot
+    [Migration("20190318210106_AddLastSeenTime")]
+    partial class AddLastSeenTime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
